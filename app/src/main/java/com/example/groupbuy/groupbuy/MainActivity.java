@@ -17,11 +17,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Locale locale = new Locale("ar");
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getApplicationContext().getResources().updateConfiguration(config, getApplicationContext().getResources().getDisplayMetrics());
+
+        // creating locale
+        Locale locale2 = new Locale("iw");
+        Locale.setDefault(locale2);
+        Configuration config2 = new Configuration();
+        config2.locale = locale2;
+
+        // updating locale
+        getBaseContext().getResources().updateConfiguration(config2, null);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -34,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
-
     }
 
     @Override
