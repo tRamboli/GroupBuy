@@ -5,6 +5,16 @@ import android.widget.ImageView;
 import java.util.Date;
 
 public class Product {
+    public Product(int id, String name, ImageView picture, String description, int price, Date publishDate, int category, int subcategory) {
+        this.id = id;
+        this.name = name;
+        this.picture = picture;
+        this.description = description;
+        this.price = price;
+        this.publishDate = publishDate;
+        this.category = category;
+        this.subcategory = subcategory;
+    }
 
     private int id;
     private String name;
@@ -12,15 +22,26 @@ public class Product {
     private String description;
     private int price;
     private Date publishDate;
+    private int category;
+    private int subcategory;
 
-    public Product(int id, String name, ImageView picture, String description, int price, Date publishDate) {
-        this.id = id;
-        this.name = name;
-        this.picture = picture;
-        this.description = description;
-        this.price = price;
-        this.publishDate = publishDate;
+    public int getCategory() {
+        return category;
     }
+
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public int getSubcategory() {
+        return subcategory;
+    }
+
+    public void setSubcategory(int subcategory) {
+        this.subcategory = subcategory;
+    }
+
+
 
     public int getId() {
         return id;

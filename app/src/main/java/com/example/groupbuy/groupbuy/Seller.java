@@ -13,7 +13,6 @@ public class Seller {
     private String surname;
     private String PhoneNumber;
     private Date birthDate;
-    private Address [] shippingaddress;
     private double rating;
     private int ratesCount;
 
@@ -26,7 +25,7 @@ public class Seller {
         this.surname = surname;
         PhoneNumber = phoneNumber;
         this.birthDate = birthDate;
-        this.shippingaddress = shippingaddress;
+
         rating=0;
         ratesCount=0;
     }
@@ -63,9 +62,7 @@ public class Seller {
         this.birthDate = birthDate;
     }
 
-    public void setShippingaddress(Address[] shippingaddress) {
-        this.shippingaddress = shippingaddress;
-    }
+
 
     public void setRating(double rating) {
         this.rating = rating;
@@ -107,9 +104,6 @@ public class Seller {
         return birthDate;
     }
 
-    public Address[] getShippingaddress() {
-        return shippingaddress;
-    }
 
     public double getRating() {
         return rating;
